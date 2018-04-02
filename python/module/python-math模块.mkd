@@ -1,20 +1,19 @@
 # python math 模块
 
-ceil
 
-#取大于等于x的最小的整数值，如果x是一个整数，则返回x
-ceil(x)
-Return the ceiling of x as an int.
-This is the smallest integral value >= x.
 
->>> math.ceil(4.01)
-5
->>> math.ceil(4.99)
-5
->>> math.ceil(-3.99)
--3
->>> math.ceil(-3.01)
--3
+###ceil
+
+ceil(x) 取大于等于x的最小的整数值，如果x是一个整数，则返回x
+
+    >>> math.ceil(4.01)
+    5
+    >>> math.ceil(4.99)
+    5
+    >>> math.ceil(-3.99)
+    -3
+    >>> math.ceil(-3.01)
+    -3
 
 copysign
 

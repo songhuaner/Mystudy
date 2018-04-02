@@ -1,1 +1,3 @@
-# nn_study
+# mystudy
+
+**结构决定功能**
