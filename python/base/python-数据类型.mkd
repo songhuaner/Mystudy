@@ -415,37 +415,105 @@ python字符串格式化符号:
     my_list = ['菜鸟教程', 'www.runoob.com']
     print("网站名：{0[0]}, 地址 {0[1]}".format(my_list))  # "0" 是必须的
 
-
-
-
 ----
 
 ## 序列
 
 ### 通用操作
 
+字符串可视为不可修改的字符序列，适用序列通用操作
+
 #### 索引
 
+    序列可通过索引访问数据
+
+    var = ['A',1,3,6]
+
+    print var[1] # 1
+    
+    除元组(不可修改)，通过索引可修改序列对应值
+    
+    var[1] = 44
+    print var # ['A',44,3,6]
 
 #### 分片
+
+    访问数据
+
+    var = list[start:end:step]
+    
+    start:分片开始位置
+    
+    end：分片结束位置(不包含)
+    
+    step: 步长
+    
+    varList = [1,2,3,4,5,'a','b','c','A','B','C']
+
+    print len(varList)
+    # all
+    # [1, 2, 3, 4, 5, 'a', 'b', 'c', 'A', 'B', 'C']
+    print varList[:]
+
+    # from 1 to 4
+    # [2, 3, 4]  not include 4
+    print varList[1:4]
+
+    # [1, 2, 3, 4, 5, 'a', 'b', 'c']
+    print varList[:-3]
+
+    # [2, 3, 4, 5, 'a', 'b', 'c']
+    print varList[1:-3]
+
+    # ['c', 'A']
+    print varList[-4:-2]
+
+    # step:2 间隔为2
+    # [1, 3, 5, 'b', 'A', 'C']
+    print varList[::2]
+
+    # [4, 3, 2, 1]  步长为负 逆序
+    print varList[3::-1]
+
+    # ['C', 'A', 'b', 5, 3, 1]
+    print varList[::-2]
+
+    # []   如果start出现的位置晚于end出现的位置，返回[]
+    print varList[4:1]
+    print varList[-1:-3]
+
+    # 逆序 start晚于end出现 返回[]
+    print varList[3:-4:-2]
 
 
 #### +号连接
 
+    var = [1,2,3,4]+['A,'B']
+    print var # [1,2,3,4,'A,'B']
 
 #### *号重复
 
+    var = [1]*3
+    print var # [1,1,1]
 
 #### 最大值
 
+    var = max([1,2,3])
+    print var # 3
 
 #### 最小值
+    
+    var = min([1,2,3])
+    print var # 1
 
 #### 长度
 
+    var = [1,2,3]
+    print len(var) # 3
 
 #### 成员
-
+    
+    
 
 
 #### 迭代
