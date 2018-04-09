@@ -17,30 +17,20 @@ ArgumentParser对象
 
 使用argparse的第一步是创建一个 ArgumentParser对象，这个ArgumentParser对象中会保存所有将命令行参数转为python数据类型的必需信息。使用 argparse.ArgumentParser创建ArgumentParser对象。
 
-argparse.ArgumentParser(prog=None, 
-                        usage=None, 
-                        epilog=None, 
-                        parents=[], 
-                        formatter_class=argparse.HelpFormatter, 
-                        prefix_chars='-',                            
-                        fromfile_prefix_chars=None,              
-                        argument_default=None,
-                        conflict_handler='error', 
-                        add_help=True)
-
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
+    argparse.ArgumentParser(prog=None, 
+                            usage=None, 
+                            epilog=None, 
+                            parents=[], 
+                            formatter_class=argparse.HelpFormatter, 
+                            prefix_chars='-',                            
+                            fromfile_prefix_chars=None,              
+                            argument_default=None,
+                            conflict_handler='error', 
+                            add_help=True)
 
 下面介绍上述函数几个常用的参数
-1.prog
+
+### prog
 
 默认情况下, ArgumentParser对象根据sys.argv[0]的值(不包括路径名)生成帮助信息中的程序名。
 
@@ -63,26 +53,6 @@ usage: myprogram.py [-h] [--foo FOO] #注意程序名
 optional arguments:
  -h, --help  show this help message and exit
  --foo FOO   foo help
-
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    12
-    13
-    14
-    15
-    16
-    17
-    18
-    19
 
 也可以人为指定一个程序名
 
