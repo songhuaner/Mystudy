@@ -1,0 +1,52 @@
+#python-threading
+
+CPython实现细节：在CPython中，由于全局解释器锁定，只有一个线程可以一次执行Python代码。如果您希望您的应用程序更好地利用多核机器的计算资源，建议您使用 multiprocessing。但是，如果要同时运行多个I / O限制任务，线程仍然是一个合适的模型。
+
+
+threading
+
+##threading.active_count（）threading.activeCount（）
+返回Thread当前活着的对象数量
+
+##threading.Condition（）
+一个返回一个新的条件变量对象的工厂函数。一个条件变量允许一个或多个线程等待，直到它们被另一个线程通知。
+
+## threading.current_thread（）threading.currentThread（）
+
+
+返回当前Thread对象，对应于调用者的控制线程
+
+##threading.enumerate（）
+
+返回Thread当前活着的所有对象的列表。该列表包括守护进程线程，由其创建的虚拟线程对象 current_thread()以及主线程。它排除了尚未启动的已终止的线程和线程。
+
+
+## threading.Event（）
+
+一个返回新事件对象的工厂函数。
+
+## 类threading.local
+表示线程本地数据的类
+
+## threading.Lock（）
+工厂函数，返回一个新的原始锁定对象。一旦一个线程获得它，后续的获取它的尝试就会被阻止，直到它被释放; 任何线程都可能释放它。
+
+##threading.RLock（）
+
+一个返回新的可重入锁定对象的工厂函数。重入锁必须由获取它的线程释放。一旦一个线程获得了一个可重入的锁，同一个线程可以再次获得它而不会阻塞; 线程每次获取它时都必须释放一次。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
